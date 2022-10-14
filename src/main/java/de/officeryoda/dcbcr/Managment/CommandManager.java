@@ -1,5 +1,8 @@
 package de.officeryoda.dcbcr.Managment;
 
+import de.officeryoda.dcbcr.commandData.PrivateBotCommand;
+import de.officeryoda.dcbcr.commandData.PublicBotCommand;
+
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -13,7 +16,7 @@ public class CommandManager {
     private static final Map<String, Consumer<PublicBotCommand>> publicCommands = new HashMap<>();
     private static final Map<String, String> publicAliases = new HashMap<>();
 
-    protected static boolean executePrivateCommand(PrivateBotCommand botCommand) {
+    public static boolean executePrivateCommand(PrivateBotCommand botCommand) {
         String command = botCommand.getCommand();
         Consumer<PrivateBotCommand> cmdExecuter;
 
@@ -30,7 +33,7 @@ public class CommandManager {
         return true;
     }
 
-    protected static boolean executePublicCommand(PublicBotCommand botCommand) {
+    public static boolean executePublicCommand(PublicBotCommand botCommand) {
         String command = botCommand.getCommand();
         Consumer<PublicBotCommand> cmdExecuter;
 

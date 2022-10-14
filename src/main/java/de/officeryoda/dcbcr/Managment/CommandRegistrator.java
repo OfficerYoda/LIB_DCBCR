@@ -1,25 +1,20 @@
 package de.officeryoda.dcbcr.Managment;
 
-import de.officeryoda.dcbcr.DevCommands.PingCommands;
+import de.officeryoda.dcbcr.Commands.PingCommands;
+import de.officeryoda.dcbcr.Listener.CommandListener;
+import net.dv8tion.jda.api.JDABuilder;
 
-import java.util.function.Consumer;
+public class CommandRegistrator {
 
-public abstract class CommandRegistrator {
-    public abstract void registerCommands();
-
-    protected static void addPrivateCommand(Consumer<PrivateBotCommand> cmdExecuter, String command, String... aliases) {
-        CommandManager.addPrivateCommand(cmdExecuter, command, aliases);
+    public CommandRegistrator(JDABuilder builder, String prefix) {
+        builder.addEventListeners(new CommandListener(prefix));
     }
 
-    protected static void addPublicCommand(Consumer<PublicBotCommand> cmdExecuter, String command, String... aliases) {
-        CommandManager.addPublicCommand(cmdExecuter, command, aliases);
-    }
-
-    public static void registerPingCommand() {
+    public void registerPingCommand() {
         registerClass(new PingCommands());
     }
 
-    public static void registerClass(CommandRegistrator commandRegistrator) {
-        commandRegistrator.registerCommands();
+    public void registerClass(CommandExecuter cmdExecuter) {
+        cmdExecuter.registerCommands();
     }
 }

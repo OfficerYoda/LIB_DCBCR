@@ -1,5 +1,9 @@
-package de.officeryoda.dcbcr.Managment;
+package de.officeryoda.dcbcr.Listener;
 
+import de.officeryoda.dcbcr.commandData.BotCommand;
+import de.officeryoda.dcbcr.Managment.CommandManager;
+import de.officeryoda.dcbcr.commandData.PrivateBotCommand;
+import de.officeryoda.dcbcr.commandData.PublicBotCommand;
 import net.dv8tion.jda.api.entities.channel.concrete.PrivateChannel;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -51,7 +55,7 @@ public class CommandListener extends ListenerAdapter {
         // args
         String[] cmdArgs = new String[0];
         if(msgArgs.length > 1)
-            cmdArgs = Arrays.copyOfRange(msgArgs, 1, msgArgs.length);
+            cmdArgs = Arrays.copyOfRange(msgArgs, PREFIX.length(), msgArgs.length);
 
         return new BotCommand(command, cmdArgs, event);
     }

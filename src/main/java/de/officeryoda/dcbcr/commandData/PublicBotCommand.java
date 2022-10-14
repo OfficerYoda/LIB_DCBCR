@@ -1,4 +1,4 @@
-package de.officeryoda.dcbcr.Managment;
+package de.officeryoda.dcbcr.commandData;
 
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
