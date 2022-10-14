@@ -5,7 +5,6 @@ import de.officeryoda.dcbcr.CommandData.PrivateBotCommand;
 import de.officeryoda.dcbcr.CommandData.PublicBotCommand;
 
 public class PingCommands implements CommandExecuter {
-
     @Override
     public void registerCommands() {
         addPrivateCommand(this::privatePing, "ping");

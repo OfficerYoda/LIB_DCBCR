@@ -1,7 +1,7 @@
 package de.officeryoda.dcbcr.Managment;
 
-import de.officeryoda.dcbcr.commandData.PrivateBotCommand;
-import de.officeryoda.dcbcr.commandData.PublicBotCommand;
+import de.officeryoda.dcbcr.CommandData.PrivateBotCommand;
+import de.officeryoda.dcbcr.CommandData.PublicBotCommand;
 
 import java.util.HashMap;
 import java.util.Locale;

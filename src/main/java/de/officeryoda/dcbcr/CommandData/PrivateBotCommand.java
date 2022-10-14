@@ -1,4 +1,4 @@
-package de.officeryoda.dcbcr.commandData;
+package de.officeryoda.dcbcr.CommandData;
 
 import net.dv8tion.jda.api.entities.channel.concrete.PrivateChannel;
 import net.dv8tion.jda.api.utils.messages.MessageCreateData;
