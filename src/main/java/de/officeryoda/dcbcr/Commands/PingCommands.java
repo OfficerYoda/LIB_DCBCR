@@ -1,10 +1,11 @@
 package de.officeryoda.dcbcr.Commands;
 
 import de.officeryoda.dcbcr.Managment.CommandExecuter;
-import de.officeryoda.dcbcr.commandData.PrivateBotCommand;
-import de.officeryoda.dcbcr.commandData.PublicBotCommand;
+import de.officeryoda.dcbcr.CommandData.PrivateBotCommand;
+import de.officeryoda.dcbcr.CommandData.PublicBotCommand;
 
-public class PingCommands extends CommandExecuter {
+public class PingCommands implements CommandExecuter {
+
     @Override
     public void registerCommands() {
         addPrivateCommand(this::privatePing, "ping");

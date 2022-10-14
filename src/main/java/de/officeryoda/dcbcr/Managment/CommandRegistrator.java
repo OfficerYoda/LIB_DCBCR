@@ -1,7 +1,6 @@
 package de.officeryoda.dcbcr.Managment;
 
 import de.officeryoda.dcbcr.Commands.PingCommands;
-import de.officeryoda.dcbcr.Listener.CommandListener;
 import net.dv8tion.jda.api.JDABuilder;
 
 public class CommandRegistrator {

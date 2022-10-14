@@ -1,9 +1,8 @@
-package de.officeryoda.dcbcr.Listener;
+package de.officeryoda.dcbcr.Managment;
 
-import de.officeryoda.dcbcr.commandData.BotCommand;
-import de.officeryoda.dcbcr.Managment.CommandManager;
-import de.officeryoda.dcbcr.commandData.PrivateBotCommand;
-import de.officeryoda.dcbcr.commandData.PublicBotCommand;
+import de.officeryoda.dcbcr.CommandData.BotCommand;
+import de.officeryoda.dcbcr.CommandData.PrivateBotCommand;
+import de.officeryoda.dcbcr.CommandData.PublicBotCommand;
 import net.dv8tion.jda.api.entities.channel.concrete.PrivateChannel;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -13,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Arrays;
 import java.util.Locale;
 
-public class CommandListener extends ListenerAdapter {
+class CommandListener extends ListenerAdapter {
 
     private final String PREFIX;
 
